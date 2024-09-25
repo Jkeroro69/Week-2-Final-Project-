@@ -19,6 +19,13 @@ a{
 .purple{
     color: rgb(100, 21, 255)
 }
+
+.text_logo{
+    color: rgb(36, 62, 99);
+    font-weight: bolder;
+    max-height: ;
+}
+
 .nav_container{
     display: flex;
     justify-content: space-between;
@@ -45,11 +52,17 @@ li{
     color: rgb(36, 62, 99);
 }
 
+@media (max-width:1023px){
+    .nav_link{
+        display:none;
+    }
+}
+
 
 .logo_text{
     display: flex;
     align-items: center;
-    font-family: Inter;
+    height: auto;
 }
 
 .logo{
@@ -107,7 +120,7 @@ h5{
 }
 
 .header_descripton{
-    max-width: 40%;
+    width: 40%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -126,7 +139,7 @@ h5{
 
 .header_img{
     width: 100%;
-    display: flex;
+    display: block;
 }
 
 .header_img--wrapper{
@@ -148,14 +161,28 @@ h5{
 }
 
 .input-email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: solid rgb(226, 232, 240);
     border-width: 2px;
     padding: 20px 192px 20px 32px;
     border-radius: 999px;
+    position: relative;
+}
+
+.btn_setting{
+    display: flex;
+    position: absolute;
+    top:9.38cm;
+    left:6.6cm;
 }
 
 .btn{
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: end;
     font-size: 16px;
     font-weight: 700;
     color: rgb(247, 250, 252);
@@ -165,19 +192,11 @@ h5{
     padding: 16px;
     margin: 8px 8px 8px 0px;
     cursor: pointer;
-    align-items: center;
     font-stretch: 100%;
-    justify-content: center;
     line-height: 16px;
-    position: absolute;
     text-align: center;
     text-size-adjust: 100%;
     width: 160px;
-}
-
-.info-input{
-    display: flex;
-    position:relative
 }
 
 .banner{
