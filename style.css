@@ -148,3 +148,17 @@ h5{
     padding: 20px 192px 20px 32px;
     border-radius: 999px;
 }
+
+.btn{
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(247, 250, 252);
+    background-color:rgb(100, 21, 255);
+    border: solid rgba(226,232,240);
+    border-radius: 999px;
+    padding: 16px;
+    margin: 8px 8px 8px 0px;
+    width: 160px;
+    align-items: center;
+}
