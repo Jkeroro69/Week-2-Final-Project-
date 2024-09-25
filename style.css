@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
     padding: 0;
-    margin:0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: "Inter", "Roboto";
+    font-family: "Inter", sans-serif;
 }
 
 .root{
@@ -20,9 +21,10 @@ a{
     color: rgb(100, 21, 255)
 }
 
-.text_logo{
+.text_logo {
     color: rgb(36, 62, 99);
-    font-weight: bolder;
+    font-weight: 900;
+    font-size: 1.2em; /* Adjust this value as needed */
 }
 
 .nav_container{
@@ -47,13 +49,19 @@ li{
     border-bottom: 2px;
 }
 
-.nav_link{
+.nav_link {
     color: rgb(36, 62, 99);
+    font-weight: 700; /* This makes the text bold */
 }
 
-@media (max-width:1023px){
-    .nav_link{
-        display:none;
+/* For hover effect (optional) */
+.nav_link:hover {
+    color: rgb(100, 21, 255); /* Changes color on hover */
+}
+
+@media (max-width:1023px) {
+    .nav_link {
+        display: none;
     }
 }
 
@@ -81,30 +89,72 @@ h5{
     font-size: 24px;
 }
 
-.btn_menu{
-    background-color: transparent;
-    font-size: 40px;
-    text-align: center;
-    border: none;
-    color: rgb(172, 81, 198);
-    display:none
+.nav_links {
+    display: flex;
+    align-items: center;
 }
 
-.menu_backdrop{
-    position: absolute;
-    background-color: #242424;
-    top:0;
-    left:0;
+.btn_menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: rgb(36, 62, 99);
+    cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+    .nav_links {
+        display: none;
+    }
+
+    .btn_menu {
+        display: block;
+    }
+}
+
+.menu_backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
     right: 0;
     bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 500ms ease
 }
+
+.menu_open .menu_backdrop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_menu--close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: white;
+    font-size: 36px;
+}
+
+.menu_links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu_list {
+    margin: 24px 0;
+}
+
+.menu_link {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 
 #Landing{
     display: flex;
@@ -120,11 +170,12 @@ h5{
     padding: 96px 0;
 }
 
-.header_description{
+.header_description {
     width: 40%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -132,16 +183,34 @@ h5{
     text-align: center;
 }
 
-.customers-logo{
-    max-width: 340px;
+.customers-logo {
+    max-width: 100%;
     margin-top: 16px;
-    padding: 0 64px 0 0;
-    scale: 1.3;
+    padding: 0;
+    scale: 1;
 }
 
-.customers-logo--wrapper{
-    width: auto;
-    height: auto;
+.customers-logo--wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+@media (max-width: 480px) {
+    .customers-banner {
+        margin-top: 32px; /* Further reduced margin for very small screens */
+    }
+
+    .banner {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    .customers-logo {
+        scale: 0.8; /* Further reduce the size of the logo for very small screens */
+    }
 }
 
 .header_img{
@@ -176,14 +245,19 @@ h5{
     .header_container{
         flex-direction: column;
     }
+    .customers-banner{
+        margin-top: 40px;
+    }
 }
 
 
-.intro_sub{
-    display:flex;
+.intro_sub {
+    display: flex;
     font-size: 16px;
     margin: 32px 0;
-    color: (36, 62, 99);
+    color: rgb(36, 62, 99);
+    text-align: center;
+    max-width: 100%;
 }
 
 .customers-banner{
@@ -196,37 +270,87 @@ h5{
 
 }
 
-.input-email{
+.input-email {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: solid rgb(226, 232, 240);
-    border-width: 2px;
-    padding: 20px 192px 20px 32px;
+    width: 100%;
+    max-width: 448px;
+    border: 2px solid rgb(226, 232, 240);
     border-radius: 999px;
+    padding: 8px;
     position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
+.btn_setting {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+}
 
-.btn{
-    display: flex;
-    flex-direction: row-reverse;
+.btn {
+    display: inline-flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     font-size: 16px;
     font-weight: 700;
     color: rgb(247, 250, 252);
-    background-color:rgb(100, 21, 255);
-    border: solid rgba(226,232,240);
+    background-color: rgb(100, 21, 255);
+    border: none;
     border-radius: 999px;
-    padding: 16px;
-    margin: 8px 8px 8px 0px;
+    padding: 12px 24px;
     cursor: pointer;
-    font-stretch: 100%;
-    line-height: 16px;
-    text-align: center;
-    text-size-adjust: 100%;
-    width: 160px;
+    white-space: nowrap;
+}
+
+/* Adjust input padding to accommodate button */
+.input-email input {
+    width: 100%;
+    padding: 8px;
+    padding-right: 164px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+@media (max-width: 635px) {
+    .input-email {
+        height: auto;
+        padding: 4px;
+        flex-direction: column;
+        align-items: stretch;
+        border: none;
+    }
+
+    .btn_setting {
+        position: static;
+        transform: none;
+        margin-top: 16px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 16px 0px;
+        margin: 16px 8px 16px 0px;
+    }
+
+    .input-email input {
+        padding: 16px 0px 16px 32px;
+        border: 2px solid rgb(226, 232, 240);
+        border-radius: 999px;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-email input {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
 }
 
 .banner{
