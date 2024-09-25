@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Final Project</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="root">
+    <section id="Landing">
+        <nav>
+            <div class="nav_container">
+                <div class="logo_text">
+                <img class="logo" src="./assets/logo.2c489fc4.svg" alt="">
+                        <h5>Treact</h5>
+                </div>
+                <ul class="nav_links">
+                    <li><a href="#" class="nav_link">About</a></li>
+                    <li><a href="#" class="nav_link">Blog</a></li>
+                    <li><a href="#" class="nav_link nav_link--primary">Pricing</a></li>
+                    <li><a href="#" class="nav_link nav_link--primary">Contact Us</a></li>
+                    <li><a href="#" class="nav_link nav_link--primary">Login</a></li>
+                    <li><a href="#" class="nav_link nav_link--primary">Sign Up</a></li>
+                </ul>
+                        <button class="btn_menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                        </button>
+                <div class="menu_backdrop">
+                    <button class="btn_menu btn_menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu_links">
+                        <li class="menu_list"><a href="#" class="menu_link" onclick="closeMenu()" >About</a></li>
+                        <li class="menu_list"><a href="#" class="menu_link" onclick="closeMenu()" >Blog</a></li>
+                        <li class="menu_list"><a href="#" class="menu_link" onclick="closeMenu()" >Pricing</a></li>
+                        <li class="menu_list"><a href="#" class="menu_link no-cursor" onclick="closeMenu()" >Contact</a></li>
+                        <li class="menu_list"><a href="#" class="menu_link no-cursor" onclick="closeMenu()" >Login</a></li>
+                     </ul>
+                </div>
+            </div>
+        </nav>
+            <header>
+                <div class="header_container">
+                    <div class="header_description">
+                        <h1 class="intro ">Beautiful React <br>Templates <span class="purple">for you.</span></h1>
+                        <p class="intro_sub">
+                            Our templates are easy to setup, understand and customize. Fully modular components
+                            with a variety of pages and components
+                        </p>
+                        <input class="input-email" type="text" placeholder="Your E-mail address">
+                        <a href="#"><button class="btn">Get started</button></a>
+                        <div class="customers-banner">
+                        <p>Our TRUSTED Customers</p>
+                        <div class="customers-logo--wrapper">
+                        <img src="./assets/customers-logo-strip.680ac7c2.png"  class="customers-logo" alt="">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="header_img--wrapper">
+                        <img src="./assets/design-illustration-2.6da6a00b.svg" class="header_img" alt="">
+                    </div>
+                </div>
+            </header>
+        </section>
+    </div>
+</body>
+</html>
