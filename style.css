@@ -107,13 +107,16 @@ h5{
 }
 
 .header_descripton{
+    max-width: 40%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .customers-logo{
-    width: 80%;
+    max-width: 340px;
+    margin-top: 16px;
+    padding: 0 64px 0 0;
 }
 
 .customers-logo--wrapper{
@@ -127,8 +130,10 @@ h5{
 }
 
 .header_img--wrapper{
+    width: 60%;
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
 
 .intro_sub{
@@ -159,6 +164,30 @@ h5{
     border-radius: 999px;
     padding: 16px;
     margin: 8px 8px 8px 0px;
-    width: 160px;
+    cursor: pointer;
     align-items: center;
+    font-stretch: 100%;
+    justify-content: center;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    text-size-adjust: 100%;
+    width: 160px;
+}
+
+.info-input{
+    display: flex;
+    position:relative
+}
+
+.banner{
+    color:rgb(160, 174, 192);
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    line-height: 18px;
+    text-align: left;
+    text-size-adjust: 100%;
+    text-transform: uppercase;
 }
