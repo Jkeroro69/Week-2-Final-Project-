@@ -1,3 +1,7 @@
-function toggleMenu() {
-    document.body.classList.toggle('menu_open');
+function openMenu(){
+    document.body.classList += " menu--open"
+}
+
+function closeMenu(){
+    document.body.classList.remove('menu--open')
 }
