@@ -206,8 +206,8 @@ h5{
     scale: 1;
     display: flex;
     flex-direction: row;
-    align-items: center; /* This centers the logos vertically */
-    justify-content: flex-start; /* This aligns logos to the left */
+    align-items: center;
+    justify-content: flex-start;
     filter: grayscale(1);
     opacity: 0.7;
 }
@@ -216,7 +216,7 @@ h5{
 .customers-logo--wrapper {
     width: 85%;
     display: flex;
-    justify-content: flex-start; /* This aligns the wrapper content to the left */
+    justify-content: flex-start;
     align-items: center;
     margin-top: 16px;
 }
@@ -268,9 +268,6 @@ h5{
     .header_container{
         flex-direction: column;
     }
-    .customers-banner{
-        margin-top: 40px;
-    }
 }
 
 
@@ -288,10 +285,45 @@ h5{
     margin-top: 80px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* This will align children to the left */
-    justify-content: flex-start; /* This ensures everything starts from the top */
+    align-items: flex-start; /* Align to the left by default */
 }
 
+/* Media query for screens 1023px and below */
+@media (max-width: 1023px) {
+    .customers-banner {
+        align-items: center; /* Center align the banner */
+    }
+
+    .banner {
+        text-align: center; /* Center align the banner text */
+    }
+
+    .customers-logo--wrapper {
+        justify-content: center; /* Center the logos */
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .customers-logo {
+        justify-content: center; /* Center the logos */
+        flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+    }
+}
+
+/* Additional media query for very small screens if needed */
+@media (max-width: 480px) {
+    .customers-banner {
+        margin-top: 32px; /* Reduced margin for very small screens */
+    }
+
+    .banner {
+        font-size: 10px; /* Smaller font size for very small screens */
+        margin-bottom: 8px;
+    }
+
+    .customers-logo {
+        scale: 0.8; /* Further reduce the size of the logo for very small screens */
+    }
+}
 
 .input-email {
     display: flex;
