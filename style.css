@@ -338,12 +338,18 @@ h5{
 /* BACk DROP Menu*/
 
 .btn_menu {
-    display: none; /* Hide by default, show on smaller screens */
+    display: none; /* Hidden by default */
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: rgb(100, 21, 255); /* Purple color to match your theme */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    line-height: 1; /* Align icon with text */
 }
+
+
 
 @media (max-width: 1023px) {
     .nav_links {
