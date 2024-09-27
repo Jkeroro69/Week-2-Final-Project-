@@ -1077,7 +1077,6 @@ h5{
     color: rgb(155, 44, 44);
 }
 
-
 .values-img-column{
     position: relative;
     flex-shrink: 0;
@@ -1087,4 +1086,34 @@ h5{
 .values-img{
     max-width: 100%;
     height: auto;
+}
+
+@media (max-width: 1028px) {
+    .principles-column{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .values-row{
+        flex-direction: column;
+        padding: 80px 0;
+    }
+    .values-principles{
+        text-align: center;
+    }
+    .values-subtext{
+        text-align: center;
+        font-size: 14px;
+    }
+    .principles-column{
+        flex-direction: column;
+        width: 100%;
+    }
+    .affordable,
+    .professionalism{
+        margin-right: 0;
+        align-items: center;
+    }
 }
