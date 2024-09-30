@@ -58,12 +58,15 @@ li{
 .nav_link {
     font-size: 16px;
     color: rgb(36, 62, 99);
-    font-weight: 500; /* This makes the text bold */
+    font-weight: 500;
+    transition: all 200ms ease;
 }
 
 /* For hover effect (optional) */
 .nav_link:not(.nav__link--anchor):hover {
+    font-weight: 900;
     color: rgb(100, 21, 255);
+    transition: all 200ms ease;
 }
 
 .nav__link--anchor:hover {
@@ -135,9 +138,10 @@ h5{
 .menu_link {
     color: white;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
 }
+
 
 .menu_list{
     padding: 12px;
@@ -148,10 +152,21 @@ h5{
     font-size: 18px;
     font-weight: 600;
     color: rgb(26, 32, 44);
+    transition: all 200ms ease;
 }
 
+.menu_link:not(.menu_signup):hover{
+    font-size:24px;
+    font-weight: 800;
+    color: rgb(100, 21, 255);
+    transition: all 200ms ease;
+}
+
+
+
+
 @media (max-width: 1024px) {
-    .menu_signup{
+    .menu_signup {
         margin: 8px 0;
         padding: 12px 32px;
         background-color: rgb(100, 21, 255);
@@ -159,9 +174,10 @@ h5{
         border-radius: 9999px;
         font-size: 18px;
         font-weight: 600;
-        }
-}
+        transition: font-size 0.3s ease;
+    }
 
+}
 #Landing{
     display: flex;
     flex-direction: column;
@@ -383,32 +399,27 @@ h5{
     }
 }
 
-.menu_backdrop{
-    position: absolute;
-    background-color: white;
-    top:0;
-    left:0;
+.menu_backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
     right: 0;
-    bottom: 0;
-    z-index: 100;
-    margin: 24px 16px;
-    padding: 32px;
+    height: auto;
+    max-height: 100vh;
+    overflow-y: auto;
     background-color: rgb(255, 255, 255);
-    border: solid;
-    border-radius: 8px;
-    border-width: 1px;
-    border-color: rgb(226, 232, 240);
-    width: auto;
-    height: fit-content;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 500ms ease
+    z-index: 1000;
+    padding: 32px;
+    border-bottom: 1px solid rgb(226, 232, 240);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    transform: translateX(100%);
+    transition: transform 500ms ease;
 }
 
-.menu_backdrop-container{
+.menu_backdrop-container {
+    max-width: 1024px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,6 +441,11 @@ h5{
 }
 
 
+.menu--open .menu_backdrop {
+    transform: translateY(0);
+}
+
+
 @media (max-width: 1024px) {
     .menu--open .menu_backdrop {
         display: flex;
@@ -437,22 +453,28 @@ h5{
     }
 }
 
+@media (min-width:1022px) {
+    .menu_backdrop{
+        display: none;
+    }  
+}
 
 .menu--open .menu_backdrop{
     visibility:visible;
     opacity: 1;
 }
-.menu--open{
-    max-height: 100vh;
-    overflow-y:hidden ;
-}
 
-.btn_menu--close{
-    position:absolute;
-    right:14px;
-    top: 10px;
+
+.btn_menu--close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
     padding: 8px;
     color: black;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 
