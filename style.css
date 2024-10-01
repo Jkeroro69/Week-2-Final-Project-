@@ -157,7 +157,7 @@ h5{
 
 .menu_link:not(.menu_signup):hover{
     font-size:24px;
-    font-weight: 800;
+    font-weight: 900;
     color: rgb(100, 21, 255);
     transition: all 200ms ease;
 }
@@ -414,8 +414,10 @@ h5{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
     transform: translateX(100%);
-    transition: transform 500ms ease;
+    transition:ease-in-out 500ms
 }
+
+
 
 .menu_backdrop-container {
     max-width: 1024px;
@@ -442,7 +444,7 @@ h5{
 
 
 .menu--open .menu_backdrop {
-    transform: translateY(0);
+    transform: translateX(0%) translateZ(0px);
 }
 
 
@@ -935,13 +937,15 @@ h5{
 }
 
 .steps-intro,
-.price-header{
+.price-header,
+.test-intro{
     letter-spacing: 1.6px;
     font-size: 16px;
     font-weight: 700;
 }
 
-.steps-header{
+.steps-header,
+.test-header{
     font-size: 50px;
     font-weight: 900;
     width: 100%;
@@ -1406,11 +1410,159 @@ h5{
         line-height: 1.625;
 }
 
+.test-row{
+    padding: 96px 0;
+    margin: 0 auto;
+    max-width: 1280px;
+}
 
+.test-row-column{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 96px 0;
+    align-items: center;
+    max-width: 1280px;
+}
 
+.test-left-container{
+    width: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
 
+.test-img{
+    width: 100%;
+    height: auto;
+}
 
+.test-right-container{
+    padding-left: 64px;
+    width: 50%;
+}
 
+.test-subtext{
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.625;
+    color: rgb(124, 139, 161);
+    opacity: 1;
+}
+
+.review-wrapper {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.review-container {
+    width: 100%;
+    height: 100%;
+}
+
+.review-star {
+    display: flex;
+    flex-direction: row;
+    height:auto;
+    width:auto;
+    color: rgb(246, 173, 85);
+}
+
+.fa-star{
+    margin-right: 8px;
+}
+
+.test-user-header{
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(36, 62, 99);
+}
+
+.user-para{
+    margin-top: 16px;
+    margin-bottom: 40px;
+    font-weight: 500;
+    line-height: 1.625;
+    color: rgb(74, 85, 104);
+}
+
+.user-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.user-pfp{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user-pic{
+    height: 80px;
+    width: 80px;
+    border-radius: 9999px;
+}
+
+.user-name {
+    margin-left: 24px;
+    margin-top: 0px;
+    color: rgb(36, 62, 99);
+}
+
+.user-name-place {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.user-career {
+    font-weight: 500;
+    color: rgb(124, 139, 161);
+}
+
+.flippage{
+    display: flex;
+}
+
+.btn-split{
+    margin: 12px 0;
+    border-right: 1px solid rgb(226, 232, 240);
+}
+
+.btn-previous{
+    margin: 0 12px;
+    background-color: rgb(237, 242, 247);
+    border: none;
+    padding: 12px 16px;
+    color: rgb(100, 21, 255);
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-next{
+    margin: 0 12px;
+    background-color: rgb(237, 242, 247);
+    border: none;
+    padding: 12px 16px;
+    color: rgb(100, 21, 255);
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 1028px) {
+    .test-row-column {
+        flex-direction: column;
+    }
+}
 
 .footer-container{
     display:flex;
@@ -1460,3 +1612,4 @@ h5{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
